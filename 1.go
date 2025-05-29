@@ -1,3 +1,5 @@
+Program Sudah Di Tambah:
+
 package main
 
 import "fmt"
@@ -148,6 +150,18 @@ func tampilkanAset() {
 }
 
 func main() {
+	assets = []CryptoAsset{
+		{"Bitcoin", "SHA-256", 90, 6},
+		{"Ethereum", "Ethash", 70, 2},
+		{"Litecoin", "Scrypt", 50, 25},
+		{"Monero", "CryptoNight", 65, 4},
+		{"Dogecoin", "Scrypt", 40, 10},
+		{"Dash", "X11", 55, 3},
+		{"Zcash", "Equihash", 75, 10},
+		{"Cardano", "Ouroboros", 30, 5},
+		{"Polkadot", "Nominated Proof-of-Stake", 35, 8},
+		{"Ripple", "XRP Ledger", 25, 1},
+	}
 	var pilihan int
 	for {
 		fmt.Println("\nMenu:")
@@ -197,9 +211,11 @@ func main() {
 		case 7:
 			selectionSortByDifficulty()
 			fmt.Println("Aset diurutkan berdasarkan tingkat kesulitan.")
+			tampilkanAset()
 		case 8:
 			insertionSortByReward()
 			fmt.Println("Aset diurutkan berdasarkan reward.")
+			tampilkanAset()
 		case 9:
 			tampilkanLaporan()
 		case 10:
